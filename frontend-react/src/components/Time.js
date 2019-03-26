@@ -15,10 +15,6 @@ class Time extends Component {
                 <form>
                     <input type='number' value={this.state.value}></input>
                 </form>
-                <select>
-                    <option>Minutes</option>
-                    <option>Hours</option>
-                </select>
             </div>
         )
     }
