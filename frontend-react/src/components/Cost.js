@@ -4,9 +4,8 @@ class Cost extends Component {
     render() {
         return (
             <div>
-                <h1>Cost</h1>
                 <form>
-                    <input type='number' placeholder="$"></input>
+                    <input type='number' placeholder="Cost" className="input"></input>
                 </form>
             </div>
         )

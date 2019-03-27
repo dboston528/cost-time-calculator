@@ -22,8 +22,7 @@ class WorkType extends Component {
     render() {
         return (
             <div>
-                <h2>Work Type</h2>
-                <select>
+                <select className="work-type">
                     <option>{this.state.dev.label} (${this.state.dev.rate}/hour)</option>
                     <option>{this.state.des.label} (${this.state.des.rate}/hour)</option>
                     <option>{this.state.proj.label} (${this.state.proj.rate}/hour)</option>

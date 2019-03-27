@@ -11,9 +11,8 @@ class Time extends Component {
     render() {
         return (
             <div>
-                <h2>Time</h2>
-                <form>
-                    <input type='number' value={this.state.value}></input>
+                <form >
+                    <input className="time-input" type='number' placeholder="Time" value={this.state.value}></input>
                 </form>
             </div>
         )

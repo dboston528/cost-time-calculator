@@ -1,5 +1,11 @@
-.App {
+.Form {
   text-align: center;
+  background: #434c69;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
 .App-logo {
@@ -19,9 +25,89 @@
   color: white;
 }
 
+.round {
+  width: 100%;
+  background: orange;
+  color: white;
+  border: 0;
+  outline: none;
+  padding: 15px 0px;
+  font-weight: 600;
+  font-size: 2rem;
+  transition: all .1s ease;
+  -webkit-appearance: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: .06em;
+
+}
+
 .App-link {
   color: #61dafb;
 }
+
+.heading {
+  color: white;
+}
+
+.input {
+  width: 96%;
+  height: 50px;
+  background: none;
+  color: white;
+  display: block;
+  font-size: 22px;
+  padding: 5px 10px;
+
+}
+
+.time-input {
+  width: 290px;
+  height: 50px;
+  background: none;
+  color: white;
+  font-size: 22px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  
+}
+
+.time-select { 
+  width: 277px;
+  height: 64.3px;
+  font-size: 22px;
+  margin-left: 5px;
+  background: orange;
+  color: white;
+}
+
+.time-block {
+  flex-direction: row;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  
+}
+body{
+  background: #c1bdba;
+}
+
+.work-type {
+  width: 100%;
+  height: 64.3px;
+  font-size: 22px;
+  
+  background: orange;
+  color: white;
+  margin-bottom: 10px;
+
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -31,3 +117,5 @@
     transform: rotate(360deg);
   }
 }
+
+

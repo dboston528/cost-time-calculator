@@ -4,7 +4,7 @@ class RoundDown extends Component {
     render() {
         return (
             <div>
-                <button>Round Down to nearest 15 minutes</button>
+                <button className="round">Round Down to nearest 15 minutes</button>
             </div>
         )
     }
