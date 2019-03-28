@@ -7,7 +7,7 @@
 
 ## Running the application
 
-### 1. Clone it
+1. Clone it
 `git clone https://github.com/dboston528/cost-time-calculator.git`
 
 2. Change to backend folder 
@@ -19,7 +19,21 @@
 4. starting the virtual environemnt
 `. venv/bin/activate`
 
+5. Start the backend
+`FLASK_APP=rates.py flask run`
 
-starting the front end
-`npm start` in the frontend directory
+6. Open a new terminal and change to root project folder (This may differ depending on where you downloaded the file)
+`cd cost-time-calculator`
+
+7. Change to the front end directory
+`cd frontend-react`
+
+8. Install dependancies
+`npm install`
+
+9. Start the frontend
+`npm start`
+
+10. Go to http://localhost:300/
+and you should see the app!!
 
