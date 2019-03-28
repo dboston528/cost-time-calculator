@@ -1,4 +1,6 @@
-starting the virtual environemnt
+# Cost Time Calculator 
+
+## starting the virtual environemnt
 `. venv/bin/activate`
 
 starting the front end
