@@ -1,4 +1,8 @@
-<img src="images/"/>
+
+
+<p align="center">
+    <img src="images/cost-calc"/>
+</p>
 <h1 align="center"> Cost Time Calculator </h1>
 ## Running the application
 ### 1. Clone it
