@@ -16,7 +16,7 @@
 3. Install the virtual environment (Mac)
 `python3 -m venv venv`
 
-4. starting the virtual environemnt
+4. Start the virtual environemnt
 `. venv/bin/activate`
 
 5. Start the backend
@@ -25,7 +25,7 @@
 6. Open a new terminal and change to root project folder (This may differ depending on where you downloaded the file)
 `cd cost-time-calculator`
 
-7. Change to the front end directory
+7. Change to the frontend directory
 `cd frontend-react`
 
 8. Install dependancies
