@@ -1,7 +1,7 @@
 
 
 <p align="center">
-    <img src="images/cost-calc"/>
+    <img src="images/cost-calc.jpg"/>
 </p>
 <h1 align="center"> Cost Time Calculator </h1>
 ## Running the application
