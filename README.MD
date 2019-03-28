@@ -6,11 +6,19 @@
 </p>
 
 ## Running the application
+
 ### 1. Clone it
 `git clone https://github.com/dboston528/cost-time-calculator.git`
 
-### starting the virtual environemnt
+2. Change to backend folder 
+`cd backend-flask`
+
+3. Install the virtual environment (Mac)
+`python3 -m venv venv`
+
+4. starting the virtual environemnt
 `. venv/bin/activate`
+
 
 starting the front end
 `npm start` in the frontend directory
