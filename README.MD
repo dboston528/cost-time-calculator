@@ -36,4 +36,4 @@
 
 10. Go to http://localhost:3000/
 and you should see the app!!
-(If you have another server running the terminal may prompt you to start the app on another port.)
+(If you have another server running on the default port, the terminal may prompt you to start the app on another port.)
