@@ -1,5 +1,5 @@
 # Cost Time Calculator 
-## Running th application
+## Running the application
 
 ### starting the virtual environemnt
 `. venv/bin/activate`
