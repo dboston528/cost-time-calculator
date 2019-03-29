@@ -29,6 +29,7 @@ class App extends Component {
   handleTimeInputChange = (event) => {
     let timeInput = event.target.value;
     this.setState({ time: timeInput });
+    console.log(timeInput);
   }
 
 
@@ -47,7 +48,6 @@ class App extends Component {
             devRate={this.state.dev.rate}
             desRate={this.state.des.rate}
             projRate={this.state.proj.rate}
-
           />
           <div className="time-block">
             <Time
