@@ -23,16 +23,12 @@ class App extends Component {
     this.setState({ dev: data[0] })
     this.setState({ des: data[1] })
     this.setState({ proj: data[2] })
-    console.log(data);
-    console.log(this);
-
   }
 
 
   handleTimeInputChange = (event) => {
     let timeInput = event.target.value;
     this.setState({ time: timeInput });
-    console.log(this);
   }
 
 

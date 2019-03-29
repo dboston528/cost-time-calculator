@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Time extends Component {
+    constructor(props) {
+        super(props);
+
+    }
+
     render() {
         return (
             <div>
