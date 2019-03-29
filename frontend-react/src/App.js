@@ -13,7 +13,10 @@ class App extends Component {
     dev: "",
     des: "",
     proj: "",
-    time: ""
+    time: "",
+    hour: "",
+    minute: "Minutes",
+    hour: "Hours"
   }
 
   async componentDidMount() {
@@ -25,7 +28,7 @@ class App extends Component {
     this.setState({ proj: data[2] })
   }
 
-
+  //Handles the time data input
   handleTimeInputChange = (event) => {
     let timeInput = event.target.value;
     this.setState({ time: timeInput });
@@ -54,7 +57,9 @@ class App extends Component {
               className="time-input"
               time={this.state.time}
               handleTimeChange={this.handleTimeInputChange} />
-            <TimeType />
+            <TimeType
+              minutes={this.state.minute}
+              hours={this.state.hour} />
           </div>
           <Cost />
           <div className="button-block">
