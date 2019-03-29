@@ -28,6 +28,14 @@ class App extends Component {
 
   }
 
+
+  handleTimeInputChange = (event) => {
+    let timeInput = event.target.value;
+    this.setState({ time: timeInput });
+    console.log(this);
+  }
+
+
   render() {
     return (
       <div className="body">
@@ -46,7 +54,10 @@ class App extends Component {
 
           />
           <div className="time-block">
-            <Time className="time-input" />
+            <Time
+              className="time-input"
+              time={this.state.time}
+              handleTimeChange={this.handleTimeInputChange} />
             <TimeType />
           </div>
           <Cost />
