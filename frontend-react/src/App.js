@@ -14,9 +14,10 @@ class App extends Component {
     des: "",
     proj: "",
     time: "",
-    hour: "",
     minute: "Minutes",
-    hour: "Hours"
+    hour: "Hours",
+    cost: 0,
+    rate: ''
   }
 
   async componentDidMount() {
@@ -26,13 +27,28 @@ class App extends Component {
     this.setState({ dev: data[0] })
     this.setState({ des: data[1] })
     this.setState({ proj: data[2] })
+    this.setState({ rate: data[0] })
+    const initialRate = this.state.dev.rate;
+    this.setState({ rate: initialRate })
+    console.log(initialRate);
   }
 
   //Handles the time data input
   handleTimeInputChange = (event) => {
     let timeInput = event.target.value;
+    let newCost = timeInput * this.state.rate
     this.setState({ time: timeInput });
-    console.log(timeInput);
+    this.setState({ cost: newCost })
+  }
+
+  handleHour = (event) => {
+  }
+
+
+
+  handleProjectCostChange = () => {
+    console.log('you clicked It');
+
   }
 
 
@@ -61,7 +77,9 @@ class App extends Component {
               minutes={this.state.minute}
               hours={this.state.hour} />
           </div>
-          <Cost />
+          <Cost
+            cost={this.state.cost}
+            projCost={this.handleProjectCostChange} />
           <div className="button-block">
             <RoundUp />
             <RoundDown />

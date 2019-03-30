@@ -5,8 +5,9 @@ class TimeType extends Component {
         return (
             <div >
                 <select className="time-select">
+                    <option>{this.props.hours}</option>
                     <option>{this.props.minutes}</option>
-                    <option>Hours</option>
+
                 </select>
             </div>
         )

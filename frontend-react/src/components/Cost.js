@@ -5,7 +5,7 @@ class Cost extends Component {
         return (
             <div>
                 <form>
-                    <input type='number' placeholder="Cost" className="input"></input>
+                    <input type='number' placeholder={this.props.cost} className="input" value={this.props.cost}></input>
                 </form>
             </div>
         )
