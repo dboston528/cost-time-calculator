@@ -17,7 +17,10 @@ class App extends Component {
     minute: "Minutes",
     hour: "Hours",
     cost: 0,
-    rate: ''
+    rate: '',
+    value: 'developer'
+
+
   }
 
   async componentDidMount() {
@@ -41,6 +44,12 @@ class App extends Component {
     this.setState({ cost: newCost })
   }
 
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+
+  }
+
   handleHour = (event) => {
   }
 
@@ -50,7 +59,7 @@ class App extends Component {
     // console.log('you clicked It');
     const projectRate = this.state.proj.rate;
     let timeInput = this.state.time;
-    let projCost = timeInput * this.state.rate;
+    const projCost = timeInput * this.state.rate;
     this.setState({ rate: projectRate });
     this.setState({ cost: projCost });
     console.log(projCost);
@@ -69,11 +78,12 @@ class App extends Component {
             dev={this.state.dev.label}
             des={this.state.des.label}
             proj={this.state.proj.label}
-
             devRate={this.state.dev.rate}
             desRate={this.state.des.rate}
             projRate={this.state.proj.rate}
             projCost={this.handleProjectCostChange}
+            workTypeChange={this.handleChange}
+            value={this.state.value}
           />
           <div className="time-block">
             <Time

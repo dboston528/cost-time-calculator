@@ -8,7 +8,7 @@ class WorkType extends Component {
     }
 
     handleProjectCostChange = () => {
-        console.log('you clicked It');
+        console.log('you clicked project management');
 
     }
 
@@ -17,13 +17,11 @@ class WorkType extends Component {
         return (
 
             <div>
-                <select className="work-type">
-                    <option>{this.props.dev} (${this.props.devRate}/hour)</option>
-                    <option>{this.props.des} (${this.props.desRate}/hour)</option>
-                    <option onSelect={this.props.projCost}>{this.props.proj} (${this.props.projRate}/hour)</option>
+                <select className="work-type" value={this.props.value} onChange={this.props.workTypeChange}>
+                    <option value='developer'>{this.props.dev} (${this.props.devRate}/hour)</option>
+                    <option value='designer'>{this.props.des} (${this.props.desRate}/hour)</option>
+                    <option value='projectManage'>{this.props.proj} (${this.props.projRate}/hour)</option>
                 </select>
-
-                <button onClick={this.props.projCost}>Test</button>
             </div>
         )
     }
