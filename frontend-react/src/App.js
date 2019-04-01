@@ -39,15 +39,26 @@ class App extends Component {
   //Handles the time data input
   handleTimeInputChange = (event) => {
     let timeInput = event.target.value;
-    let newCost = timeInput * this.state.rate
+    let newCost = timeInput * this.state.rate;
     this.setState({ time: timeInput });
     this.setState({ cost: newCost })
   }
 
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({ value: event.target.value });
-
+    let newValue = event.target.value
+    console.log('you clicked ' + newValue);
+    const designRate = this.state.des.rate;
+    const projectRate = this.state.proj.rate;
+    const initialRate = this.state.proj.dev;
+    if (event.target.value = 'designer') {
+      this.setState({ rate: designRate });
+    } else if (event.target.value = 'projectManage') {
+      this.setState({ rate: projectRate })
+    } else if (event.target.value = 'developer') {
+      this.setState({ rate: initialRate })
+    }
   }
 
   handleHour = (event) => {
