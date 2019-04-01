@@ -30,7 +30,7 @@ class App extends Component {
     this.setState({ rate: data[0] })
     const initialRate = this.state.dev.rate;
     this.setState({ rate: initialRate })
-    console.log(initialRate);
+    console.log("$" + initialRate + " is the initial rate");
   }
 
   //Handles the time data input
@@ -47,8 +47,14 @@ class App extends Component {
 
 
   handleProjectCostChange = () => {
-    console.log('you clicked It');
-
+    // console.log('you clicked It');
+    const projectRate = this.state.proj.rate;
+    let timeInput = this.state.time;
+    let projCost = timeInput * this.state.rate;
+    this.setState({ rate: projectRate });
+    this.setState({ cost: projCost });
+    console.log(projCost);
+    console.log(projectRate);
   }
 
 
@@ -67,6 +73,7 @@ class App extends Component {
             devRate={this.state.dev.rate}
             desRate={this.state.des.rate}
             projRate={this.state.proj.rate}
+            projCost={this.handleProjectCostChange}
           />
           <div className="time-block">
             <Time
@@ -79,7 +86,7 @@ class App extends Component {
           </div>
           <Cost
             cost={this.state.cost}
-            projCost={this.handleProjectCostChange} />
+          />
           <div className="button-block">
             <RoundUp />
             <RoundDown />
