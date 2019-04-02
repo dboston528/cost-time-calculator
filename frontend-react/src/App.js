@@ -19,8 +19,6 @@ class App extends Component {
     cost: 0,
     rate: '',
     value: 'developer'
-
-
   }
 
   async componentDidMount() {
@@ -54,26 +52,19 @@ class App extends Component {
     const developerRate = this.state.dev.rate;
     const designRate2 = this.state.des.rate;
 
-    if (event.target.value = 'designer') {
+    // let currentTime = this.state.time;
+    // console.log(currentTime);
+    // let newCost = currentTime * designRate2;
+    // this.setState({ cost: newCost });
+    // console.log(newCost);
+
+    if (event.target.value === 'designer') {
+      let currentTime = this.state.time;
+      let newCost = currentTime * designRate;
       this.setState({ rate: designRate });
-    } else if (event.target.value = 'projectManage') {
-      this.setState({ rate: projectRate })
-    } else {
-      this.setState({ rate: developerRate })
+      this.setState({ cost: newCost });
     }
 
-    if (event.target.value == 'developer') {
-      const developerRate2 = this.state.dev.rate;
-      let devCost = currentTime * developerRate2;
-      this.setState({ cost: devCost });
-    }
-
-
-    let currentTime = this.state.time;
-    console.log(currentTime);
-    let newCost = currentTime * designRate2;
-    this.setState({ cost: newCost });
-    console.log(newCost);
   }
 
   handleHour = (event) => {
