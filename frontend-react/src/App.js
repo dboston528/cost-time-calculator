@@ -33,7 +33,7 @@ class App extends Component {
     this.setState({ rate: data[0] })
     const initialRate = this.state.dev.rate;
     this.setState({ rate: initialRate })
-    console.log("$" + initialRate + " is the initial rate");
+    // console.log("$" + initialRate + " is the initial rate");
   }
 
   //Handles the time data input
@@ -46,19 +46,34 @@ class App extends Component {
 
 
   handleChange = (event) => {
+    let newValue = event.target.value;
     this.setState({ value: event.target.value });
-    let newValue = event.target.value
-    console.log('you clicked ' + newValue);
+
     const designRate = this.state.des.rate;
     const projectRate = this.state.proj.rate;
-    const initialRate = this.state.proj.dev;
+    const developerRate = this.state.dev.rate;
+    const designRate2 = this.state.des.rate;
+
     if (event.target.value = 'designer') {
       this.setState({ rate: designRate });
     } else if (event.target.value = 'projectManage') {
       this.setState({ rate: projectRate })
-    } else if (event.target.value = 'developer') {
-      this.setState({ rate: initialRate })
+    } else {
+      this.setState({ rate: developerRate })
     }
+
+    if (event.target.value == 'developer') {
+      const developerRate2 = this.state.dev.rate;
+      let devCost = currentTime * developerRate2;
+      this.setState({ cost: devCost });
+    }
+
+
+    let currentTime = this.state.time;
+    console.log(currentTime);
+    let newCost = currentTime * designRate2;
+    this.setState({ cost: newCost });
+    console.log(newCost);
   }
 
   handleHour = (event) => {
@@ -66,16 +81,16 @@ class App extends Component {
 
 
 
-  handleProjectCostChange = () => {
-    // console.log('you clicked It');
-    const projectRate = this.state.proj.rate;
-    let timeInput = this.state.time;
-    const projCost = timeInput * this.state.rate;
-    this.setState({ rate: projectRate });
-    this.setState({ cost: projCost });
-    console.log(projCost);
-    console.log(projectRate);
-  }
+  // handleProjectCostChange = () => {
+  //   // console.log('you clicked It');
+  //   const projectRate = this.state.proj.rate;
+  //   let timeInput = this.state.time;
+  //   const projCost = timeInput * this.state.rate;
+  //   this.setState({ rate: projectRate });
+  //   this.setState({ cost: projCost });
+  //   console.log(projCost);
+  //   console.log(projectRate);
+  // }
 
 
   render() {
