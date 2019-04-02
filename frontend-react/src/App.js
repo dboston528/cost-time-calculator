@@ -18,7 +18,8 @@ class App extends Component {
     hour: "Hours",
     cost: 0,
     rate: '',
-    value: 'developer'
+    value: 'developer',
+    timeType: 'hours'
   }
 
   async componentDidMount() {
@@ -50,25 +51,36 @@ class App extends Component {
     const designRate = this.state.des.rate;
     const projectRate = this.state.proj.rate;
     const developerRate = this.state.dev.rate;
-    const designRate2 = this.state.des.rate;
-
-    // let currentTime = this.state.time;
-    // console.log(currentTime);
-    // let newCost = currentTime * designRate2;
-    // this.setState({ cost: newCost });
-    // console.log(newCost);
 
     if (event.target.value === 'designer') {
       let currentTime = this.state.time;
       let newCost = currentTime * designRate;
       this.setState({ rate: designRate });
       this.setState({ cost: newCost });
+    } else if (event.target.value === 'developer') {
+      let currentTime = this.state.time;
+      let newCost = currentTime * developerRate;
+      this.setState({ rate: developerRate });
+      this.setState({ cost: newCost });
     }
 
   }
 
-  handleHour = (event) => {
+  timeTypeChange = (event) => {
+    this.setState({ timeType: event.target.value });
+
+    if (event.target.value === 'minutes') {
+      let theTime = this.state.time;
+      let convertTime = theTime * 60;
+      this.setState({ time: convertTime });
+    } else if (event.target.value === 'hours') {
+      let theTime = this.state.time;
+      let convertTime = theTime / 60;
+      this.setState({ time: convertTime });
+    }
   }
+
+
 
 
 
@@ -109,7 +121,9 @@ class App extends Component {
               handleTimeChange={this.handleTimeInputChange} />
             <TimeType
               minutes={this.state.minute}
-              hours={this.state.hour} />
+              hours={this.state.hour}
+              timeType={this.state.timeType}
+              change={this.timeTypeChange} />
           </div>
           <Cost
             cost={this.state.cost}

@@ -4,9 +4,9 @@ class TimeType extends Component {
     render() {
         return (
             <div >
-                <select className="time-select">
-                    <option>{this.props.hours}</option>
-                    <option>{this.props.minutes}</option>
+                <select value={this.props.timeType} onChange={this.props.change} className="time-select">
+                    <option value='hours'>{this.props.hours}</option>
+                    <option value='minutes'>{this.props.minutes}</option>
 
                 </select>
             </div>
