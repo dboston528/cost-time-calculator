@@ -19,21 +19,30 @@
 4. Start the virtual environemnt
 `. venv/bin/activate`
 
-5. Start the backend
+5. Install Flask
+`pip install Flask`
+
+6. Install the following dependicies
+flask cors
+`pip install -U flask-cors`
+Flask RESTful
+`pip install flask-restful`
+
+7. Start the backend
 `FLASK_APP=rates.py flask run`
 
-6. Open a new terminal and change to root project folder (This may differ depending on where you downloaded the file)
+8. Open a new terminal and change to root project folder (This may differ depending on where you downloaded the file)
 `cd cost-time-calculator`
 
-7. Change to the frontend directory
+9. Change to the frontend directory
 `cd frontend-react`
 
-8. Install dependancies
+10. Install dependancies
 `npm install`
 
-9. Start the frontend
+11. Start the frontend
 `npm start`
 
-10. Go to http://localhost:3000/
+12. Go to http://localhost:3000/
 and you should see the app!!
 (If you have another server running on the default port, the terminal may prompt you to start the app on another port.)
