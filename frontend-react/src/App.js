@@ -33,7 +33,6 @@ class App extends Component {
     this.setState({ rate: data[0] })
     const initialRate = this.state.dev.rate;
     this.setState({ rate: initialRate })
-    // console.log("$" + initialRate + " is the initial rate");
   }
 
   //Handles the time data input
@@ -110,14 +109,6 @@ class App extends Component {
       this.setState({ time: convertTime });
     }
 
-    // if (event.target.value === 'minutes') {
-    //   let theRate = this.state.rate;
-    //   let time = this.state.time;
-    //   let conTime = time / 60;
-    //   let cost = conTime * theRate;
-    //   this.setState({ cost: cost });
-    // }
-
   }
 
   handleCostInputChange = (event) => {
@@ -133,6 +124,8 @@ class App extends Component {
 
     }
   }
+
+  //Rounds minutes 
   roundChange = () => {
     if (this.state.timeType === 'minutes') {
       let time = this.state.time;
