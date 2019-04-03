@@ -72,28 +72,43 @@ class App extends Component {
     if (event.target.value === 'minutes') {
       let theTime = this.state.time;
       let convertTime = theTime * 60;
+
+      let theRate = this.state.rate;
+      let newCost = ((convertTime / 60) * theRate);
+      console.log(newCost);
       this.setState({ time: convertTime });
+
     } else if (event.target.value === 'hours') {
       let theTime = this.state.time;
       let convertTime = theTime / 60;
       this.setState({ time: convertTime });
     }
+
+    // if (event.target.value === 'minutes') {
+    //   let theRate = this.state.rate;
+    //   let time = this.state.time;
+    //   let conTime = time / 60;
+    //   let cost = conTime * theRate;
+    //   this.setState({ cost: cost });
+    // }
+
+  }
+
+  handleCostInputChange = (event) => {
+    this.setState({ cost: event.target.value });
+    let cost = event.target.value;
+    let rate = this.state.rate;
+    let newTime = cost / rate;
+    this.setState({ time: newTime });
+    console.log(event.target.value);
+
+    if (this.state.timeType === 'minutes') {
+
+
+    }
   }
 
 
-
-
-
-  // handleProjectCostChange = () => {
-  //   // console.log('you clicked It');
-  //   const projectRate = this.state.proj.rate;
-  //   let timeInput = this.state.time;
-  //   const projCost = timeInput * this.state.rate;
-  //   this.setState({ rate: projectRate });
-  //   this.setState({ cost: projCost });
-  //   console.log(projCost);
-  //   console.log(projectRate);
-  // }
 
 
   render() {
@@ -127,6 +142,7 @@ class App extends Component {
           </div>
           <Cost
             cost={this.state.cost}
+            costChange={this.handleCostInputChange}
           />
           <div className="button-block">
             <RoundUp />
