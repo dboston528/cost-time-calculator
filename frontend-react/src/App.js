@@ -74,6 +74,18 @@ class App extends Component {
       let newCost = currentTime * developerRate;
       this.setState({ rate: developerRate });
       this.setState({ cost: newCost });
+    } else if (event.target.value === 'projectManage') {
+      let currentTime = this.state.time;
+      let newCost = currentTime * projectRate;
+      this.setState({ rate: projectRate });
+      this.setState({ cost: newCost });
+    }
+
+    if (this.state.timeType === 'minutes') {
+      let rate = this.state.rate;
+      let time = this.state.time;
+      let cost = rate * time / 60;
+      this.setState({ cost: cost });
     }
 
   }
@@ -89,6 +101,7 @@ class App extends Component {
       let newCost = ((convertTime / 60) * theRate);
       console.log(newCost);
       this.setState({ time: convertTime });
+      this.setState({ cost: newCost }); //set cost
 
     } else if (event.target.value === 'hours') {
       let theTime = this.state.time;
