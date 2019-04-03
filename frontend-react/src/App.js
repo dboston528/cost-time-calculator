@@ -40,7 +40,19 @@ class App extends Component {
     let timeInput = event.target.value;
     let newCost = timeInput * this.state.rate;
     this.setState({ time: timeInput });
-    this.setState({ cost: newCost })
+    this.setState({ cost: newCost });
+
+    if (this.state.timeType === 'minutes') {
+      let time = event.target.value;
+      console.log(time);
+      const aCost = time / 60 * this.state.rate;
+      console.log(time);
+      this.setState({ cost: aCost });
+    } else if (this.state.timeType === 'hours') {
+
+    }
+
+
   }
 
 
