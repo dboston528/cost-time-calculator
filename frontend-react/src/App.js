@@ -129,7 +129,7 @@ class App extends Component {
   roundChange = () => {
     if (this.state.timeType === 'minutes') {
       let time = this.state.time;
-      let newTime = (Math.round(time / 15) * 15) % 60;
+      let newTime = (Math.round(time / 15) * 15);
       let cost = this.state.cost;
       let rate = this.state.rate;
       let newCost = (newTime / 60) * rate;
