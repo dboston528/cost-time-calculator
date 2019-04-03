@@ -23,7 +23,8 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const url = "http://localhost:5000/api/rates";
+    // const url = "http://localhost:5000/api/rates";
+    const url = "https://cost-calculator-backend.herokuapp.com/api/rates";
     const response = await fetch(url);
     const data = await response.json();
     this.setState({ dev: data[0] })
