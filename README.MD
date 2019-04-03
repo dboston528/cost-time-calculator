@@ -22,7 +22,7 @@
 5. Install Flask
 `pip install Flask`
 
-6. Install the following dependicies
+6. Install the following dependencies
 flask cors
 `pip install -U flask-cors`
 Flask RESTful
@@ -37,7 +37,7 @@ Flask RESTful
 9. Change to the frontend directory
 `cd frontend-react`
 
-10. Install dependancies
+10. Install dependencies
 `npm install`
 
 11. Start the frontend
