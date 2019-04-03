@@ -30,7 +30,7 @@
   background: orange;
   color: white;
   border: 0;
-  outline: none;
+  /* outline: none; */
   padding: 15px 0px;
   font-weight: 600;
   font-size: 2rem;
@@ -38,7 +38,7 @@
   -webkit-appearance: none;
   margin-bottom: 10px;
   margin-top: 10px;
-  letter-spacing: .06em;
+  letter-spacing: .03em;
 
 }
 

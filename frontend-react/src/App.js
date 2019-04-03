@@ -132,7 +132,18 @@ class App extends Component {
 
     }
   }
+  roundChange = () => {
+    if (this.state.timeType === 'minutes') {
+      let time = this.state.time;
+      let newTime = (Math.round(time / 15) * 15) % 60;
+      let cost = this.state.cost;
+      let rate = this.state.rate;
+      let newCost = (newTime / 60) * rate;
+      this.setState({ time: newTime });
+      this.setState({ cost: newCost });
 
+    }
+  }
 
 
 
@@ -170,8 +181,9 @@ class App extends Component {
             costChange={this.handleCostInputChange}
           />
           <div className="button-block">
-            <RoundUp />
-            <RoundDown />
+            <RoundUp
+              round={this.roundChange} />
+
           </div>
         </div>
       </div>
