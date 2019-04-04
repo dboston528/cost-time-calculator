@@ -6,7 +6,7 @@ class Time extends Component {
         return (
             <div>
                 <form >
-                    <input className="time-input" type='text' placeholder="Time" onChange={this.props.handleTimeChange} value={this.props.time}></input>
+                    <input className="time-input" type='text' placeholder=" Time" onChange={this.props.handleTimeChange} value={this.props.time}></input>
                 </form>
             </div>
         )
