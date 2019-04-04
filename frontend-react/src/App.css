@@ -90,8 +90,7 @@
   display: -ms-flexbox;
   display: -moz-flex;
   display: -webkit-flex;
-  display: flex;
-  
+  display: flex; 
 }
 body{
   background: #c1bdba;
@@ -106,6 +105,22 @@ body{
   color: white;
   margin-bottom: 10px;
 
+}
+
+
+
+@media only screen and (max-width: 681px) {
+  .time-block {
+    width: 100%;
+    display: block;
+  }
+  .time-select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .time-input {
+    width: 100%;
+  }
 }
 
 
