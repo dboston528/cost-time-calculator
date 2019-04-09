@@ -16,7 +16,7 @@ class App extends Component {
     time: "",
     minute: "Minutes",
     hour: "Hours",
-    cost: 0,
+    cost: '',
     rate: '',
     value: 'developer',
     timeType: 'hours'
@@ -39,15 +39,17 @@ class App extends Component {
   handleTimeInputChange = (event) => {
     let timeInput = event.target.value;
     let newCost = timeInput * this.state.rate;
+    let dollarCost = newCost.toFixed(2);
     this.setState({ time: timeInput });
-    this.setState({ cost: newCost });
+    this.setState({ cost: dollarCost });
 
     if (this.state.timeType === 'minutes') {
       let time = event.target.value;
       console.log(time);
       const aCost = time / 60 * this.state.rate;
+      let dollarCost = aCost.toFixed(2);
       console.log(time);
-      this.setState({ cost: aCost });
+      this.setState({ cost: dollarCost });
     } else if (this.state.timeType === 'hours') {
 
     }
@@ -67,29 +69,35 @@ class App extends Component {
     if (event.target.value === 'designer') {
       let currentTime = this.state.time;
       let newCost = currentTime * designRate;
+      let dollarCost = newCost.toFixed(2);
       this.setState({ rate: designRate });
-      this.setState({ cost: newCost });
+      this.setState({ cost: dollarCost });
     } else if (event.target.value === 'developer') {
       let currentTime = this.state.time;
       let newCost = currentTime * developerRate;
+      let dollarCost = newCost.toFixed(2);
       this.setState({ rate: developerRate });
-      this.setState({ cost: newCost });
+      this.setState({ cost: dollarCost });
     } else if (event.target.value === 'projectManage') {
       let currentTime = this.state.time;
       let newCost = currentTime * projectRate;
+      let dollarCost = newCost.toFixed(2);
       this.setState({ rate: projectRate });
-      this.setState({ cost: newCost });
+      this.setState({ cost: dollarCost });
     }
 
     if (this.state.timeType === 'minutes') {
       let rate = this.state.rate;
       let time = this.state.time;
       let cost = rate * time / 60;
-      this.setState({ cost: cost });
+      let dollarCost = cost.toFixed(2);
+      this.setState({ cost: dollarCost });
     }
 
   }
 
+
+  //Handles changes betwween hours and minutes
   timeTypeChange = (event) => {
     this.setState({ timeType: event.target.value });
 
@@ -99,9 +107,9 @@ class App extends Component {
 
       let theRate = this.state.rate;
       let newCost = ((convertTime / 60) * theRate);
-      console.log(newCost);
+      let dollarCost = newCost.toFixed(2);
       this.setState({ time: convertTime });
-      this.setState({ cost: newCost }); //set cost
+      this.setState({ cost: dollarCost });
 
     } else if (event.target.value === 'hours') {
       let theTime = this.state.time;
@@ -111,6 +119,7 @@ class App extends Component {
 
   }
 
+  //handles actions in the cost input
   handleCostInputChange = (event) => {
     this.setState({ cost: event.target.value });
     let cost = event.target.value;
@@ -130,11 +139,11 @@ class App extends Component {
     if (this.state.timeType === 'minutes') {
       let time = this.state.time;
       let newTime = (Math.round(time / 15) * 15);
-      let cost = this.state.cost;
       let rate = this.state.rate;
       let newCost = (newTime / 60) * rate;
+      let dollarCost = newCost.toFixed(2);
       this.setState({ time: newTime });
-      this.setState({ cost: newCost });
+      this.setState({ cost: dollarCost });
 
     }
   }

@@ -17,6 +17,7 @@ class WorkType extends Component {
         return (
 
             <div>
+                <p className='form-head'>Select a Work Type</p>
                 <select className="work-type" value={this.props.value} onChange={this.props.workTypeChange}>
                     <option value='developer'>{this.props.dev} (${this.props.devRate}/hour)</option>
                     <option value='designer'>{this.props.des} (${this.props.desRate}/hour)</option>
