@@ -19,7 +19,8 @@ class App extends Component {
     cost: '',
     rate: '',
     value: 'developer',
-    timeType: 'hours'
+    timeType: 'hours',
+    howMany: 'How many hours?'
   }
 
   async componentDidMount() {
@@ -117,6 +118,14 @@ class App extends Component {
       this.setState({ time: convertTime });
     }
 
+    if (event.target.value === 'minutes') {
+      let newType = 'How many minutes?';
+      this.setState({ howMany: newType });
+    } else if (event.target.value === 'hours') {
+      let hourType = 'How many hours?';
+      this.setState({ howMany: hourType });
+    }
+
   }
 
   //handles actions in the cost input
@@ -177,7 +186,8 @@ class App extends Component {
           <Time
             className="time-input"
             time={this.state.time}
-            handleTimeChange={this.handleTimeInputChange} />
+            handleTimeChange={this.handleTimeInputChange}
+            howMany={this.state.howMany} />
 
           <Cost
             cost={this.state.cost}
