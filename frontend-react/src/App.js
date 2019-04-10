@@ -154,6 +154,14 @@ class App extends Component {
       this.setState({ time: newTime });
       this.setState({ cost: dollarCost });
 
+    } else if (this.state.timeType === 'hours') {
+      let time = this.state.time;
+      let newTime = (Math.round(time / 10) * 10);
+      let rate = this.state.rate;
+      let thecost = newTime * rate;
+      let dollarCost = thecost.toFixed(2);
+      this.setState({ time: newTime });
+      this.setState({ cost: dollarCost });
     }
   }
 
