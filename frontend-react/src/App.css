@@ -135,25 +135,10 @@ body{
   background: white;
 }
 
-@media only screen and (max-width: 681px) {
-  .time-block {
-    width: 100%;
-    display: block;
-  }
-  .time-select {
-    width: 100%;
-    margin-left: 0;
-  }
-  .time-input {
-    width: 100%;
-    padding: 0;
-    
-  }
-  .input {
-    padding: 0;
-    width: 100%;
-  }
-}
+
+/* @media only screen and (max-width: 681px) {
+
+} */
 
 
 @keyframes App-logo-spin {

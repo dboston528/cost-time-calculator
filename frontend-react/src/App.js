@@ -168,17 +168,17 @@ class App extends Component {
             workTypeChange={this.handleChange}
             value={this.state.value}
           />
-          <div className="time-block">
-            <Time
-              className="time-input"
-              time={this.state.time}
-              handleTimeChange={this.handleTimeInputChange} />
-            <TimeType
-              minutes={this.state.minute}
-              hours={this.state.hour}
-              timeType={this.state.timeType}
-              change={this.timeTypeChange} />
-          </div>
+
+          <TimeType
+            minutes={this.state.minute}
+            hours={this.state.hour}
+            timeType={this.state.timeType}
+            change={this.timeTypeChange} />
+          <Time
+            className="time-input"
+            time={this.state.time}
+            handleTimeChange={this.handleTimeInputChange} />
+
           <Cost
             cost={this.state.cost}
             costChange={this.handleCostInputChange}
