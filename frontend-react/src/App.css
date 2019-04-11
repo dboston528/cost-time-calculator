@@ -2,9 +2,11 @@
   text-align: center;
   /* background: #434c69; */
   padding: 40px;
+  padding-top: 10px;
   max-width: 400px;
   margin: 40px auto;
   box-sizing: content-box;
+  margin-top: 0px;
 }
 
 .App-logo {
