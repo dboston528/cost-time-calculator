@@ -5,7 +5,7 @@
     <h1 align="center"> Cost Time Calculator </h1>
 </p>
 
-## Running the application
+## Running the application:
 
 1. Clone it
 `git clone https://github.com/dboston528/cost-time-calculator.git`
